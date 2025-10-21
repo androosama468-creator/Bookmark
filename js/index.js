@@ -41,17 +41,19 @@ function checkWebName(link) {
         window.alert("This Name Is Already Exist!⚠️");
         return true;
     }
+    return false;
 }
 function checkWebUrl(link) {
     if (link.sName === '' || link.sUrl === '') {
         window.alert("Please Fill All The Fields ⚠️");
-        return true;
+        return false;
     }
 
     if (!isValidUrl(link.sUrl)) {
         window.alert("❌ The link is invalid! Make sure it is spelled correctly like: https://example.com");
         return false;
     }
+    return true;
 }
 
 function clearInputs() {
